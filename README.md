@@ -3,7 +3,7 @@
 A secure and scalable backend for a Todo Manager application.  
 Built using **Node.js**, **Express**, **Prisma ORM**, **MongoDB**, **JWT Authentication**, and **bcrypt**.
 
-This backend powers a modern Todo App frontend built with React + Redux + Tailwind CSS.https://todo-backend-dfml.onrender.com/
+This backend powers a modern Todo App frontend built with React + Redux + Tailwind CSS.
 ---
 
 ## 🚀 Live Demo
