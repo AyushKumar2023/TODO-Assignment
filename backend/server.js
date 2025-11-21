@@ -8,7 +8,15 @@ import { connectDB } from "./config/prismaClient.js";
 const app = express();
 connectDB()
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",        // Vite local
+    "https://todo-65uy.onrender.com" // Your frontend URL
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 
 // Routes
