@@ -1,6 +1,5 @@
 import prisma from "../config/prismaClient.js";
 
-// GET ALL TASKS OF USER
 export const getTasks = async (req, res) => {
   try {
     const tasks = await prisma.task.findMany({
@@ -14,7 +13,6 @@ export const getTasks = async (req, res) => {
   }
 };
 
-// CREATE NEW TASK
 export const createTask = async (req, res) => {
   try {
     const { title, description } = req.body;
@@ -37,7 +35,6 @@ export const createTask = async (req, res) => {
   }
 };
 
-// DELETE TASK → NOW VIA POST
 export const deleteTask = async (req, res) => {
   try {
     const { id } = req.body;
@@ -53,7 +50,6 @@ export const deleteTask = async (req, res) => {
   }
 };
 
-// TOGGLE COMPLETED STATUS → NOW VIA POST
 export const toggleTaskCompletion = async (req, res) => {
   try {
     const { id } = req.body;
@@ -84,7 +80,6 @@ export const toggleTaskCompletion = async (req, res) => {
   }
 };
 
-// UPDATE DESCRIPTION ONLY → NEW LOGIC
 export const updateDescription = async (req, res) => {
   try {
     const { id, description } = req.body;
