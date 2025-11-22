@@ -10,10 +10,7 @@ import {
 
 const router = express.Router();
 
-// ONLY GET route
 router.get("/", authMiddleware, getTasks);
-
-// ALL other operations use POST
 router.post("/create", authMiddleware, createTask);
 router.post("/delete", authMiddleware, deleteTask);
 router.post("/toggle", authMiddleware, toggleTaskCompletion);
